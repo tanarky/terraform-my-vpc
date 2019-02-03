@@ -23,14 +23,14 @@ AWS_PROFILE=hoge terraform apply
 7. (VPC) デフォルトルートテーブルの 送信先=0.0.0.0/0 ターゲット=IGにする
 8. (VPC) natgatewayとnatgw用のroute tableを作る
 9. (VPC) private-a, private-cをnatgw route tableと紐付ける
+10. (Route53) private domain設定
 ```
 
-※ domain = sample_dev.tokyo.aws となる -> 「最強のSSH踏み台設定」参照
+※ domain = sampl-dev.tokyo.aws となる -> 「最強のSSH踏み台設定」参照
 
 ## 補足
 
-- とりあえずvpcのみ
-- 手順5.についてroute53のinternal domain設定もしたいけど、今はまだない(追加予定)
+- vpcのみ、ssh踏み台サーバは上げていない
 - natgwはsingle az(＝1つしか置いていない＝節約のため)
 
 ## 参考

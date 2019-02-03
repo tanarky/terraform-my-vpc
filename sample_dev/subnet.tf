@@ -1,16 +1,18 @@
 resource "aws_subnet" "public_a" {
-  availability_zone = "${lookup(var.aws_region, "${var.project_code}_${var.env}")}a"
-  cidr_block = "10.${lookup(var.project_num, "${var.project_code}_${var.env}")}.0.0/24"
-  vpc_id     = "${aws_vpc.main.id}"
+  availability_zone       = "${lookup(var.aws_region, "${var.project_code}_${var.env}")}a"
+  cidr_block              = "10.${lookup(var.project_num, "${var.project_code}_${var.env}")}.0.0/24"
+  vpc_id                  = "${aws_vpc.main.id}"
+  map_public_ip_on_launch = true
   tags = {
     Name = "${var.project_code}-${var.env}-public-a"
   }
 }
 
 resource "aws_subnet" "public_c" {
-  availability_zone = "${lookup(var.aws_region, "${var.project_code}_${var.env}")}c"
-  cidr_block = "10.${lookup(var.project_num, "${var.project_code}_${var.env}")}.1.0/24"
-  vpc_id     = "${aws_vpc.main.id}"
+  availability_zone       = "${lookup(var.aws_region, "${var.project_code}_${var.env}")}c"
+  cidr_block              = "10.${lookup(var.project_num, "${var.project_code}_${var.env}")}.1.0/24"
+  vpc_id                  = "${aws_vpc.main.id}"
+  map_public_ip_on_launch = true
   tags = {
     Name = "${var.project_code}-${var.env}-public-c"
   }
