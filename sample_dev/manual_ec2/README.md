@@ -7,7 +7,7 @@ AWS_PROFILE=parade terraform init
 # 起動方法
 
 ```
-TF_VAR_ec2_key_name=key-pair-hogehoge AWS_PROFILE=parade terraform apply
+TF_VAR_ec2_key_name=key-pair-hogehoge AWS_PROFILE=hoge_profile terraform apply
 
 ---
 TF_VAR_ec2_key_name = キーペア名
