@@ -1,4 +1,4 @@
-resource "aws_security_group" "allow-http-from-all" {
+resource "aws_security_group" "allow_http_from_all" {
   name   = "${var.project_code}-${var.env}-allow-http-from-all"
   vpc_id = "${aws_vpc.main.id}"
 
@@ -24,7 +24,7 @@ resource "aws_security_group" "allow-http-from-all" {
   }
 }
 
-resource "aws_security_group" "allow-all-from-internal" {
+resource "aws_security_group" "allow_all_from_internal" {
   name   = "${var.project_code}-${var.env}-allow-all-from-internal"
   vpc_id = "${aws_vpc.main.id}"
 
@@ -43,7 +43,7 @@ resource "aws_security_group" "allow-all-from-internal" {
   }
 }
 
-resource "aws_security_group" "allow-ssh" {
+resource "aws_security_group" "allow_ssh" {
   name   = "${var.project_code}-${var.env}-allow-ssh"
   vpc_id = "${aws_vpc.main.id}"
 

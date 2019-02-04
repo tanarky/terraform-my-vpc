@@ -4,6 +4,10 @@ terraform-my-vpc
 
 ## 使い方
 
+terraform remote state保存用に必要なs3 bucketを手動で作る
+
+ 今回のサンプルの場合 "bucket-tanarky-sample-dev"
+
 ```
 cd sample_dev
 AWS_PROFILE=hoge terraform init

@@ -1,7 +1,3 @@
-provider "aws" {
-  region = "${lookup(var.aws_region, "${var.project_code}_${var.env}")}"
-}
-
 resource "aws_vpc" "main" {
   cidr_block = "10.${lookup(var.project_num, "${var.project_code}_${var.env}")}.0.0/16"
   enable_dns_hostnames = true
